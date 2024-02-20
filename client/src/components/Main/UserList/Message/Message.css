@@ -1,0 +1,59 @@
+.chatMessage {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 645px;
+}
+
+[class = '2'] {
+    color: #d3d3d3;
+    text-align: center;
+    font-size: 2rem;
+}
+
+[class = '1'] {
+    background-color: #3e92ff;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    max-width: 50%;
+    margin: 1rem 0 1rem auto;
+}
+
+[class = '0'] {
+    background-color: #e9e9e9;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    max-width: 50%;
+}
+
+.messageInput {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 800px;
+    border-top: 1px solid #d3d3d3;
+}
+
+input {
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 20px;
+    margin: 10px;
+    margin-left: 60px;
+    width: 500px;
+    font-size: 1rem;
+}
+
+.sendButton {
+    font-size: 1.1rem;
+    padding: 5px 30px;
+}
