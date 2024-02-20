@@ -19,7 +19,7 @@ export default function Message(userId) {
         async function getUserMessages() {
             await axios
                 .get(
-                    "https://helpdesk-testing.herokuapp.com/messages?userId=" +
+                    "https://facebook-helpdesk-backend.vercel.app/messages?userId=" +
                         userId.userId
                 )
                 .then((response) => {
@@ -45,14 +45,14 @@ export default function Message(userId) {
     }, [userId]);
 
     useEffect(() => {
-        const socket = io("https://helpdesk-testing.herokuapp.com");
+        const socket = io("facebook-helpdesk-backend.vercel.app");
         socket.on("check", (data) => {
             console.log(data);
             if (data === userId.userId) {
                 async function getUserMessages() {
                     await axios
                         .get(
-                            "https://helpdesk-testing.herokuapp.com/messages?userId=" +
+                            "https://facebook-helpdesk-backend.vercel.app/messages?userId=" +
                                 userId.userId
                         )
                         .then((response) => {
@@ -83,7 +83,7 @@ export default function Message(userId) {
         } else {
             await axios
                 .post(
-                    "https://helpdesk-testing.herokuapp.com/messages?userId=" +
+                    "https://facebook-helpdesk-backend.vercel.app/messages?userId=" +
                         userId.userId,
                     { text: message }
                 )

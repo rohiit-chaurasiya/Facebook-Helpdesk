@@ -14,7 +14,7 @@ export default function UserList() {
     useEffect(() => {
         async function getUserList() {
             await axios
-                .get("https://helpdesk-testing.herokuapp.com/user")
+                .get("https://facebook-helpdesk-backend.vercel.app/user")
                 .then((response) => {
                     // userList.push(response.data);
                     // setting user list to what we got from the database
@@ -30,7 +30,7 @@ export default function UserList() {
     }, []);
 
     // useEffect(() => {
-    //     const socket = io('https://helpdesk-testing.herokuapp.com')
+    //     const socket = io('facebook-helpdesk-backend.vercel.app')
     //     socket.on('check', (data) => {
     //         console.log(data);
     //     })
